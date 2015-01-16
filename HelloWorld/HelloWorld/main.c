@@ -7,9 +7,16 @@
 //
 
 #include <stdio.h>
+#include <stdlib.h>
+#include "pause.h"
 
-int main(int argc, const char * argv[]) {
-	// insert code here...
+int main() {
 	printf("Hello, World!\n");
-    return 0;
+	
+	//system("pause"); // Windows only
+	//printf("press any key"); getchar(); //ghetto workaround for OSX
+	
+	pause(); //ghetto workaround as a function
+	
+	return 0;
 }
