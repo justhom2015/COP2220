@@ -34,7 +34,6 @@ int main(int argc, const char * argv[]) {
 	
 		//Var for number of strings
 	int numberOfStrings = (sizeof(prompt)/sizeof(prompt[0]));
-	printf("numberOfStrings = %i \n", numberOfStrings);
 	
 		//For loop to go through string array and display strings on each line
 	for (int i = 0; i < numberOfStrings; i++) {
