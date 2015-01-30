@@ -28,21 +28,50 @@
 
 int main() {
 	
-	char input[2048];
-	
+	const int INPUT_SIZE = 2048;
+	char input[INPUT_SIZE];
 	
 		//Prompt User
 	printf("Enter a string less than 1000 characters in length: \n");
 	scanf("%s", input);
 	
 	
-		//Make everything uppercase because C defines that 'a' and 'A' are different characters
+		//Make everything uppercase because in the ASCII Table 'a' and 'A' are different values
 	for (int i = 0; input[i]; i++) {
-		input[i] = tolower(input[i]);
+		input[i] = toupper(input[i]);
 	}
 	
-	printf("%s \n", input); //Remove test
 	
+	const int FREQUENCY_SIZE = 127;
+	int frequency[FREQUENCY_SIZE]; //Compiler will automatically initalize all elements to 0
+
+	int currentInputElement = 0;
+	int currentFrequencyElement = 0;
+	
+	for (int i = 0; i < INPUT_SIZE; i++) {
+		
+			// go through all frequency elements and test
+		
+		for (int i = 0; i < FREQUENCY_SIZE; i++) {
+			if (input[currentInputElement] == currentFrequencyElement) {
+				
+				frequency[currentFrequencyElement] = frequency[currentFrequencyElement] + 1;
+			
+				currentFrequencyElement = currentFrequencyElement + 1;
+			}
+		}
+		
+			//test next element
+			currentInputElement = currentInputElement + 1;
+	}
+	
+	
+	
+	for (int i = 0; i < FREQUENCY_SIZE; i++) {
+		if (frequency[i] ) {
+		printf("%i", (int)frequency[i]);
+		}
+	}
 	
 	
 	return 0;
