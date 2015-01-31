@@ -39,7 +39,7 @@ int main() {
 	
 		//Prompt User for input
 	printf("Enter a string less than 1000 characters in length: \n");
-	scanf("%s", input);
+		//scanf("%s", input);
 	
 		//Make everything uppercase because in the ASCII Table 'a' and 'A' are different values
 	for (int i = 0; input[i]; i++) {
@@ -73,7 +73,6 @@ int main() {
 		 When we detect the number 127 we know we have reached the end of the string.
 		 */
 	int stringLength = 0;
-	printf("%i \n", (int)input[0]);
 	while (input[stringLength] != 127) {
 		stringLength++;
 	}
@@ -90,7 +89,7 @@ int main() {
 		//Go through array that has occurences stores
 	for (int i=0; i < 7;i++) {
 		double frequency = (double)match[i]/(double)stringLength;
-		printf("The letter occured %f \n", frequency);
+		printf("%c : %f \n", letters[i], frequency);
 	}
 	
 
