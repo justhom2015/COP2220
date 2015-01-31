@@ -31,15 +31,18 @@ int main() {
 	int INPUT_SIZE = 1024;	//input array size
 	char input[INPUT_SIZE];			//input array
 	
-		// initalize input[] elements to 128
-		// there are 127 characters in ascii table so the value 128 can be used to check for input in the element.
+		// initalize input[] elements to 127
+		// there are 127 characters in ascii table so the value 127 can be used to check for input in the element.
 	for (int i = 0; i < INPUT_SIZE; i++) {
 		input[i]=127;
 	}
 	
 		//Prompt User for input
 	printf("Enter a string less than 1000 characters in length: \n");
-		//scanf("%s", input);
+	scanf("%s", input);
+	printf("input %s", input); //REMOVE - check whats in the array
+	
+	
 	
 		//Make everything uppercase because in the ASCII Table 'a' and 'A' are different values
 	for (int i = 0; input[i]; i++) {
@@ -76,8 +79,12 @@ int main() {
 	while (input[stringLength] != 127) {
 		stringLength++;
 	}
+	
+	
 		//Arrays start with 0 so subtract 1 from stringLength
-	stringLength = stringLength - 1;
+		//stringLength = stringLength - 1;
+	
+	printf("string length: %i \n", stringLength); //REMOVE
 
 		//If user enters more than 1000 characters or didnt enter anything then call main.
 	if (stringLength > 1000) {
@@ -89,7 +96,7 @@ int main() {
 		//Go through array that has occurences stores
 	for (int i=0; i < 7;i++) {
 		double frequency = (double)match[i]/(double)stringLength;
-		printf("%c : %f \n", letters[i], frequency);
+		printf("%c: %f \n", letters[i], frequency);
 	}
 	
 
