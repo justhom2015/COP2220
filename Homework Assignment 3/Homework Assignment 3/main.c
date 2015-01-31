@@ -47,10 +47,10 @@ int main() {
 	}
 	
 	
-	int match[7]; // array to count and store matches
 
 	
 		//go through array and check if element matches E, T, A, O, I, N, or S
+	int match[7]; // array to count and store matches
 	for (int i = 0; i < INPUT_SIZE; i++) {
 				//If element matches then add 1 to the value of the element in
 			switch ((int)input[i]) {
@@ -88,20 +88,30 @@ int main() {
 	}
 	
 	
-	
-	
 		//Calculate string length by subtracting the number of
 		//elements above 127 from the INPUT_SIZE
 	
-	for (int i=0; i < 7;i++) {
-		printf("%i \n", match[i]);
+		//Before we initalized all elements of input[] to 128 since there are 127 characters in the ascii table.
+		//This while loop will end when the element of input[] equals 128.
+	int stringLength = 0;
+	while ((int)input[stringLength] != 128) {
+		stringLength++;
+	}
+
+		//If user enters more than 1000 characters or didnt enter anything then call main.
+	if (stringLength > 1000) {
+		main();
+	}else if (stringLength == 0){
+		main();
 	}
 	
 	
 	
-	
-	
-	
+	for (int i=0; i < 7;i++) {
+		double frequency = match[i]/stringLength;
+		printf("%f", frequency);
+		printf("%i \n", match[i]);
+	}
 	
 
 	return 0;
