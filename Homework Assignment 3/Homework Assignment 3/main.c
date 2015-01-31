@@ -39,8 +39,7 @@ int main() {
 	
 		//Prompt User for input
 	printf("Enter a string less than 1000 characters in length: \n");
-	scanf("%999s", input);
-	
+	scanf("%999[^\n]s", input);
 	
 		//Make everything uppercase because in the ASCII Table 'a' and 'A' are different values
 	for (int i = 0; input[i]; i++) {
@@ -49,7 +48,9 @@ int main() {
 
 	
 		//go through array and check if element matches E, T, A, O, I, N, or S
-	int match[7]; // array to count and store matches
+		// Array to count and store matches
+	int match[7];
+		// Array to store letters we want to match
 	char letters[7] = { 'E' , 'T' , 'A' , 'O' , 'I' , 'N' , 'S' };
 	for (int i = 0; i < INPUT_SIZE; i++) {
 			//Test if input[current element] == letters
@@ -77,21 +78,17 @@ int main() {
 	while (input[stringLength] != 127) {
 		stringLength++;
 	}
-	
-	
 		//Arrays start with 0 so subtract 1 from stringLength
 	stringLength = stringLength - 1;
 	
-	printf("string length: %i \n", stringLength); //REMOVE
-
 		//If user enters more than 1000 characters or didnt enter anything then call main.
 	if (stringLength > 1000) {
 		main();
-	}else if (stringLength == 0){
+	}else if (stringLength == -1){
 		main();
 	}
 
-		//Go through array that has occurences stores
+		//Go through array that has occurences and calculate frequency of that letter.
 	for (int i=0; i < 7;i++) {
 		double frequency = (double)match[i]/(double)stringLength;
 		printf("%c: %f \n", letters[i], frequency);
