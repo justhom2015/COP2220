@@ -45,52 +45,23 @@ int main() {
 	for (int i = 0; input[i]; i++) {
 		input[i] = (int)toupper(input[i]);
 	}
-	
-	
 
 	
 		//go through array and check if element matches E, T, A, O, I, N, or S
 	int match[7]; // array to count and store matches
-	int lettersAsIntegers[6] = { (int)'E' , (int)'T' , (int)'A' , (int)'O' , (int)'I' , (int)'N' , (int)'S'};
+	char letters[7] = { 'E' , 'T' , 'A' , 'O' , 'I' , 'N' , 'S' };
 	for (int i = 0; i < INPUT_SIZE; i++) {
-				//If element matches then add 1 to the value of the element in
-			switch ((int)input[i]) {
-				case (int)'E':
-					match[0] = match[0] + 1;
-					break;
-					
-				case (int)'T':
-					match[1] = match[1] + 1;
-					break;
-					
-				case (int)'A':
-					match[2] = match[2] + 1;
-					break;
-					
-				case (int)'O':
-					match[3] = match[3] + 1;
-					break;
-					
-				case (int)'I':
-					match[4] = match[4] + 1;
-					break;
-					
-				case (int)'N':
-					match[5] = match[5] + 1;
-					break;
-					
-				case (int)'S':
-					match[6] = match[6] + 1;
-					break;
-					
-				default:
-					break;
+			//Test if input[current element] == letters
+			//Since i is within the scope if this for loop we use e instead
+		for (int e = 0; e < 7; e++) {
+			if (input[i] == letters[e]) {
+				match[e] = match[e] + 1;
 			}
+		}
 	}
 	
 		//Calculate string length by subtracting the number of
 		//elements above 127 from the INPUT_SIZE
-	
 		//Before we initalized all elements of input[] to 128 since there are 127 characters in the ascii table.
 		//This while loop will end when the element of input[] equals 128.
 		/*
