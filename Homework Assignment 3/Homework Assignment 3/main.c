@@ -28,7 +28,7 @@
 
 int main() {
 	
-	int INPUT_SIZE = 1024;	//input array size
+	int INPUT_SIZE = 1000;	//input array size
 	char input[INPUT_SIZE];			//input array
 	
 		// initalize input[] elements to 127
@@ -39,9 +39,7 @@ int main() {
 	
 		//Prompt User for input
 	printf("Enter a string less than 1000 characters in length: \n");
-	scanf("%s", input);
-	printf("input %s", input); //REMOVE - check whats in the array
-	
+	scanf("%999s", input);
 	
 	
 		//Make everything uppercase because in the ASCII Table 'a' and 'A' are different values
@@ -82,7 +80,7 @@ int main() {
 	
 	
 		//Arrays start with 0 so subtract 1 from stringLength
-		//stringLength = stringLength - 1;
+	stringLength = stringLength - 1;
 	
 	printf("string length: %i \n", stringLength); //REMOVE
 
