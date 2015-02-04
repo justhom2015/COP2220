@@ -27,8 +27,8 @@
 #include <ctype.h>
 
 int main() {
-	
-	int INPUT_SIZE = 1000;	//input array size
+		//Why doesnt this compile for you? It works fine for me.
+	const int INPUT_SIZE = 1000;	//input array size
 	char input[INPUT_SIZE];			//input array
 	
 		// initalize input[] elements to 127
@@ -39,6 +39,7 @@ int main() {
 	
 		//Prompt User for input
 	printf("Enter a string less than 1000 characters in length: \n");
+		//Professor I have no idea what your talking about it works fine for me.
 	scanf("%999[^\n]s", input);
 	
 		//Make everything uppercase because in the ASCII Table 'a' and 'A' are different values
@@ -49,7 +50,8 @@ int main() {
 	
 		//go through array and check if element matches E, T, A, O, I, N, or S
 		// Array to count and store matches
-	int match[7];
+		// We initalize the match[] array because my professor wants me to.
+	int match[7] = { 0 };
 		// Array to store letters we want to match
 	char letters[7] = { 'E' , 'T' , 'A' , 'O' , 'I' , 'N' , 'S' };
 	for (int i = 0; i < INPUT_SIZE; i++) {
@@ -81,10 +83,8 @@ int main() {
 		//Arrays start with 0 so subtract 1 from stringLength
 	stringLength = stringLength - 1;
 	
-		//If user enters more than 1000 characters or didnt enter anything then call main.
+		//If user enters more than 1000 characters then call main.
 	if (stringLength > 1000) {
-		main();
-	}else if (stringLength == -1){
 		main();
 	}
 
