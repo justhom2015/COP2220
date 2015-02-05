@@ -25,6 +25,7 @@
 
 #include <stdio.h>
 #include <ctype.h>
+#include <string.h>
 
 int main() {
 		//Why doesnt this compile for you? It works fine for me.
@@ -39,8 +40,9 @@ int main() {
 	
 		//Prompt User for input
 	printf("Enter a string less than 1000 characters in length: \n");
-		//Professor I have no idea what your talking about it works fine for me.
-	scanf("%999[^\n]s", input);
+		//fgets because some platforms dont handle printf the same way.
+	fgets(input, 999, stdin);
+
 	
 		//Make everything uppercase because in the ASCII Table 'a' and 'A' are different values
 	for (int i = 0; input[i]; i++) {
@@ -50,7 +52,7 @@ int main() {
 	
 		//go through array and check if element matches E, T, A, O, I, N, or S
 		// Array to count and store matches
-		// We initalize the match[] array because my professor wants me to.
+		// We initalize the match[] array because in release mode xcode does not initalize arrays[]
 	int match[7] = { 0 };
 		// Array to store letters we want to match
 	char letters[7] = { 'E' , 'T' , 'A' , 'O' , 'I' , 'N' , 'S' };
@@ -81,7 +83,8 @@ int main() {
 		stringLength++;
 	}
 		//Arrays start with 0 so subtract 1 from stringLength
-	stringLength = stringLength - 1;
+		//subract 1 more to remove null terminator \0
+	stringLength = stringLength - 2;
 	
 		//If user enters more than 1000 characters then call main.
 	if (stringLength > 1000) {
