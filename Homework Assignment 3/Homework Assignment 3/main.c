@@ -42,6 +42,7 @@ int main() {
 	printf("Enter a string less than 1000 characters in length: \n");
 		//fgets because some platforms dont handle printf the same way.
 	fgets(input, 999, stdin);
+	
 
 	
 		//Make everything uppercase because in the ASCII Table 'a' and 'A' are different values

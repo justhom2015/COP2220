@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2B236D561A7B0AE00032F4DA /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B236D551A7B0AE00032F4DA /* main.c */; };
+		2B52CCCF1A96B8EA0093C9DF /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B52CCCE1A96B8EA0093C9DF /* main.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		2B236D501A7B0AE00032F4DA /* CopyFiles */ = {
+		2B52CCC91A96B8EA0093C9DF /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -23,12 +23,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2B236D521A7B0AE00032F4DA /* Homework Assignment 3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Homework Assignment 3"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2B236D551A7B0AE00032F4DA /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		2B52CCCB1A96B8EA0093C9DF /* Extra Credit Homework 1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Extra Credit Homework 1"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B52CCCE1A96B8EA0093C9DF /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2B236D4F1A7B0AE00032F4DA /* Frameworks */ = {
+		2B52CCC81A96B8EA0093C9DF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -38,94 +38,94 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2B236D491A7B0AE00032F4DA = {
+		2B52CCC21A96B8EA0093C9DF = {
 			isa = PBXGroup;
 			children = (
-				2B236D541A7B0AE00032F4DA /* Homework Assignment 3 */,
-				2B236D531A7B0AE00032F4DA /* Products */,
+				2B52CCCD1A96B8EA0093C9DF /* Extra Credit Homework 1 */,
+				2B52CCCC1A96B8EA0093C9DF /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		2B236D531A7B0AE00032F4DA /* Products */ = {
+		2B52CCCC1A96B8EA0093C9DF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2B236D521A7B0AE00032F4DA /* Homework Assignment 3 */,
+				2B52CCCB1A96B8EA0093C9DF /* Extra Credit Homework 1 */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2B236D541A7B0AE00032F4DA /* Homework Assignment 3 */ = {
+		2B52CCCD1A96B8EA0093C9DF /* Extra Credit Homework 1 */ = {
 			isa = PBXGroup;
 			children = (
-				2B236D551A7B0AE00032F4DA /* main.c */,
+				2B52CCCE1A96B8EA0093C9DF /* main.c */,
 			);
-			path = "Homework Assignment 3";
+			path = "Extra Credit Homework 1";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2B236D511A7B0AE00032F4DA /* Homework Assignment 3 */ = {
+		2B52CCCA1A96B8EA0093C9DF /* Extra Credit Homework 1 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2B236D591A7B0AE00032F4DA /* Build configuration list for PBXNativeTarget "Homework Assignment 3" */;
+			buildConfigurationList = 2B52CCD21A96B8EA0093C9DF /* Build configuration list for PBXNativeTarget "Extra Credit Homework 1" */;
 			buildPhases = (
-				2B236D4E1A7B0AE00032F4DA /* Sources */,
-				2B236D4F1A7B0AE00032F4DA /* Frameworks */,
-				2B236D501A7B0AE00032F4DA /* CopyFiles */,
+				2B52CCC71A96B8EA0093C9DF /* Sources */,
+				2B52CCC81A96B8EA0093C9DF /* Frameworks */,
+				2B52CCC91A96B8EA0093C9DF /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Homework Assignment 3";
-			productName = "Homework Assignment 3";
-			productReference = 2B236D521A7B0AE00032F4DA /* Homework Assignment 3 */;
+			name = "Extra Credit Homework 1";
+			productName = "Extra Credit Homework 1";
+			productReference = 2B52CCCB1A96B8EA0093C9DF /* Extra Credit Homework 1 */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		2B236D4A1A7B0AE00032F4DA /* Project object */ = {
+		2B52CCC31A96B8EA0093C9DF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Abir Faisal";
 				TargetAttributes = {
-					2B236D511A7B0AE00032F4DA = {
+					2B52CCCA1A96B8EA0093C9DF = {
 						CreatedOnToolsVersion = 6.1.1;
 					};
 				};
 			};
-			buildConfigurationList = 2B236D4D1A7B0AE00032F4DA /* Build configuration list for PBXProject "Homework Assignment 3" */;
+			buildConfigurationList = 2B52CCC61A96B8EA0093C9DF /* Build configuration list for PBXProject "Extra Credit Homework 1" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 2B236D491A7B0AE00032F4DA;
-			productRefGroup = 2B236D531A7B0AE00032F4DA /* Products */;
+			mainGroup = 2B52CCC21A96B8EA0093C9DF;
+			productRefGroup = 2B52CCCC1A96B8EA0093C9DF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2B236D511A7B0AE00032F4DA /* Homework Assignment 3 */,
+				2B52CCCA1A96B8EA0093C9DF /* Extra Credit Homework 1 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2B236D4E1A7B0AE00032F4DA /* Sources */ = {
+		2B52CCC71A96B8EA0093C9DF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B236D561A7B0AE00032F4DA /* main.c in Sources */,
+				2B52CCCF1A96B8EA0093C9DF /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		2B236D571A7B0AE00032F4DA /* Debug */ = {
+		2B52CCD01A96B8EA0093C9DF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -165,7 +165,7 @@
 			};
 			name = Debug;
 		};
-		2B236D581A7B0AE00032F4DA /* Release */ = {
+		2B52CCD11A96B8EA0093C9DF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -199,22 +199,16 @@
 			};
 			name = Release;
 		};
-		2B236D5A1A7B0AE00032F4DA /* Debug */ = {
+		2B52CCD31A96B8EA0093C9DF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
-				CLANG_CXX_LIBRARY = "libstdc++";
-				GCC_C_LANGUAGE_STANDARD = c11;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		2B236D5B1A7B0AE00032F4DA /* Release */ = {
+		2B52CCD41A96B8EA0093C9DF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
-				CLANG_CXX_LIBRARY = "libstdc++";
-				GCC_C_LANGUAGE_STANDARD = c11;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -222,25 +216,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2B236D4D1A7B0AE00032F4DA /* Build configuration list for PBXProject "Homework Assignment 3" */ = {
+		2B52CCC61A96B8EA0093C9DF /* Build configuration list for PBXProject "Extra Credit Homework 1" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2B236D571A7B0AE00032F4DA /* Debug */,
-				2B236D581A7B0AE00032F4DA /* Release */,
+				2B52CCD01A96B8EA0093C9DF /* Debug */,
+				2B52CCD11A96B8EA0093C9DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2B236D591A7B0AE00032F4DA /* Build configuration list for PBXNativeTarget "Homework Assignment 3" */ = {
+		2B52CCD21A96B8EA0093C9DF /* Build configuration list for PBXNativeTarget "Extra Credit Homework 1" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2B236D5A1A7B0AE00032F4DA /* Debug */,
-				2B236D5B1A7B0AE00032F4DA /* Release */,
+				2B52CCD31A96B8EA0093C9DF /* Debug */,
+				2B52CCD41A96B8EA0093C9DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 2B236D4A1A7B0AE00032F4DA /* Project object */;
+	rootObject = 2B52CCC31A96B8EA0093C9DF /* Project object */;
 }

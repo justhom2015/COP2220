@@ -11,10 +11,6 @@
 
 int main(int argc, const char * argv[]) {
 	
-	int num = 6;
-	int *input = 0;
-	printf("Enter a number: ");
-	scanf(input);	
 	
     return 0;
 }
