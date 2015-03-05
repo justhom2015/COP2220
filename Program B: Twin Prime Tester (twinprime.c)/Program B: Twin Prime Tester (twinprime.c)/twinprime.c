@@ -44,12 +44,14 @@ typedef int bool;
 
 
 #include <stdio.h>
+#include <math.h>
 
 
  // Pre­condition: value will be an integer greater than 1.
  // Post­condition: Returns true (1) if value is prime, or
  // false (0) otherwise.
 bool isPrime(int value){
+	
 	
 	int i;
 	
@@ -72,6 +74,9 @@ bool isPrime(int value){
  // Post­condition: Returns the next prime number greater than or
  // equal to current.
 int nextPrime(int current){
+	
+		//make sure current is positive interger greater than 1
+	
 	
 	
 	int i = 0;
@@ -109,6 +114,9 @@ int main(int argc, const char * argv[]) {
 	
 	printf("Enter a Number \n");
 	scanf("%d", &input);
+	
+		//make sure input is not negative
+	input = abs(input);
 	
 	
 	
