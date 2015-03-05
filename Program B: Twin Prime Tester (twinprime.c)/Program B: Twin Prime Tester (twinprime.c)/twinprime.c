@@ -53,7 +53,11 @@ bool isPrime(int value){
 	
 	int i;
 	
-	for (i=2; i <= (value / 2); i++) {
+		//incase user enters 2
+	if (value == 2) {return false;}
+	
+	
+	for (i=2; i <= (value/2); i++) {
 		
 		if (value % i == 0) {
 			return false;
