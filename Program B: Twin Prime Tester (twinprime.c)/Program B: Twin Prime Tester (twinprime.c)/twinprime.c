@@ -73,6 +73,7 @@ int nextPrime(int current){
 	
 	
 	
+	
 	return 0;
 }
 
@@ -83,8 +84,8 @@ int nextPrime(int current){
 int main(int argc, const char * argv[]) {
 	
 	
-	int input;
-	bool prime;
+	int input = 3;
+	int twinPrime = 5;
 	
 	
 	
@@ -95,10 +96,26 @@ int main(int argc, const char * argv[]) {
 	
 	
 	
-	prime = isPrime(input);
+	
+		//Test if prime
+	if (isPrime(input)) {
+		
+			//print current prime
+		printf("isPrime: %d \n", twinPrime);
+		
+		
+			//print twin prime
+		twinPrime = nextPrime(input);
+		
+		printf("isPrime: %d \n", twinPrime);
+	}else{
+			//If input is not a prime number
+		printf("%d is not a prime nigga. \n", input);
+	}
 	
 	
-	printf("isPrime: %d \n", prime);
+
+	
 	
 
 	
