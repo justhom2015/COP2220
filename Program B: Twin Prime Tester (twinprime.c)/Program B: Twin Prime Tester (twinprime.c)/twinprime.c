@@ -41,6 +41,8 @@ typedef int bool;
 #define false 0
 
 
+
+
 #include <stdio.h>
 
 
@@ -58,7 +60,6 @@ bool isPrime(int value){
 		}
 	}
 	return true;
-	
 }
 
 
@@ -80,11 +81,14 @@ int nextPrime(int current){
 		
 			//if is prime do somthing
 		if (isPrime(current)) {
+
 				//return the twin prime
 			return current;
 		}
+
 	}
-	return 0;
+	
+	return false;
 }
 
 
@@ -95,9 +99,7 @@ int main(int argc, const char * argv[]) {
 	
 	
 	int input = 3;
-	int travis = 0;
 	int twinPrime = 5;
-	
 	
 	
 	
@@ -106,6 +108,9 @@ int main(int argc, const char * argv[]) {
 	
 	
 	
+	while (isPrime(input) == false) {
+		input++;
+	}
 	
 		//Test if prime
 	if (isPrime(input)) {
@@ -117,21 +122,17 @@ int main(int argc, const char * argv[]) {
 			//print twin prime
 		twinPrime = nextPrime(input);
 		
-		printf("%d is the twin prime of %d \n", twinPrime, input);
+		
+			//if twin prime does not return false
+			//else tell user that input does not have a twin prime
+		if (twinPrime != false) {
+			printf("%d is the twin prime of %d \n", twinPrime, input);
+		}else{
+			printf("%d does not have a twin prime. \n", input);
+		}
 		
 		
-	}else{
-			//If input is not a prime number
-		printf("%d is not a prime nigga. \n", input);
-		
-		input++;
 	}
-	
-	
-
-	
-	
-
 	
 	
     return 0;
