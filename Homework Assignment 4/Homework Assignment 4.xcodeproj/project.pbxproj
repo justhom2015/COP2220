@@ -25,6 +25,7 @@
 /* Begin PBXFileReference section */
 		2BB9CAA81AA58A6E00980F4C /* Homework Assignment 4 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Homework Assignment 4"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BB9CAAB1AA58A6E00980F4C /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		2BE166391AAD051F003AA726 /* hw4Functions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = hw4Functions.h; path = ../hw4Functions.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +58,7 @@
 		2BB9CAAA1AA58A6E00980F4C /* Homework Assignment 4 */ = {
 			isa = PBXGroup;
 			children = (
+				2BE166391AAD051F003AA726 /* hw4Functions.h */,
 				2BB9CAAB1AA58A6E00980F4C /* main.c */,
 			);
 			path = "Homework Assignment 4";
@@ -234,6 +236,7 @@
 				2BB9CAB11AA58A6E00980F4C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
