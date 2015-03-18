@@ -37,7 +37,7 @@
  You will need to use modulus operators and addition to constrain the number returned by rand() to [min damage, max damage].
  */
 
-
+	//make bool type because lazy
 typedef int bool;
 #define true 1
 #define false 0
@@ -49,17 +49,45 @@ typedef int bool;
 
 int main(int argc, const char * argv[]) {
 	
+		//random seed srand
 	
 	
+
+		//Current player's health as both input into the function and output (has damage subtracted from it).
+	double health;
+	
+		//Armor modifier input into the function.
+	double armor;
+	
+	int minDamage;
+	
+	int maxDamage;
+	
+	double actualDamage;
+	
+	bool alive = true;
 	
 	
-	// insert code here...
-	printf("Hello, World!\n");
-    return 0;
+		//get input
 	
 	
+		//while player is alive
+	while (alive) {
+
+	
+		printf("Player health");
+		
+		if (3 == 4) {
+			
+		}
+	
+	}
 	
 	
+		//if not alive
+	if (!alive) {
+		printf("Player health");
+	}
 	
 	
 	

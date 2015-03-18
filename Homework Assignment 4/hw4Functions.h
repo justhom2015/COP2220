@@ -77,21 +77,30 @@ void health(){
 }
 
 
+
 void armor(){
 	
 }
+
+
 
 void minDamage(){
 	
 }
 
+
+
 void maxDamage(){
 	
 }
 
+
+
 void damage(){
 	
 }
+
+
 
 void alive(){
 	
