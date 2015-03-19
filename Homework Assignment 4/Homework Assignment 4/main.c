@@ -47,7 +47,24 @@ typedef int bool;
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include "hw4Functions.h"
+
+	//funciton
+double getDamage(double *health, double armor, int minDamage, int maxDamage){
+	
+	double damage = 0.0;
+	
+		//get damage
+	damage = rand() % (maxDamage - minDamage + 1) + minDamage;
+	
+	if (armor != 1) {
+		damage = (1-armor) * damage;
+	}
+	
+	*health = *health - damage;
+	
+	return damage;
+}
+
 
 int main(int argc, const char * argv[]) {
 	
