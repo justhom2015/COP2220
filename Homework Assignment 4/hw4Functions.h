@@ -69,36 +69,15 @@ double getDamage(double *health, double armor, int minDamage, int maxDamage){
 	
 		//get damage
 	damage = rand() % (maxDamage - minDamage + 1) + minDamage;
-	damage = (1-armor) * damage;
+	
+	if (armor != 1) {
+		damage = (1-armor) * damage;
+	}
 	
 	*health = *health - damage;
 	
 	return damage;
-	
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

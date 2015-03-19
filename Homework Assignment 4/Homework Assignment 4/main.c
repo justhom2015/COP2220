@@ -56,7 +56,7 @@ int main(int argc, const char * argv[]) {
 
 		//Current player's health as both input into the function and output (has damage subtracted from it).
 	double health = 1;
-	double lastHealth = 1;
+	double initalHealth = 1;
 	double healthPercent = 100;
 
 	
@@ -80,7 +80,7 @@ int main(int argc, const char * argv[]) {
 		// Allow the user to enter the health value, armor value, min damage, and max damage to be used in your function.
 	printf("Enter player health\n");
 	scanf("%lf", &health);
-	lastHealth = health;
+	initalHealth = health;
 	
 	printf("Enter player armor\n");
 	scanf("%lf", &armor);
@@ -107,25 +107,22 @@ int main(int argc, const char * argv[]) {
 		//while player is alive
 	while (alive) {
 		
-		
+			//get and incure damage
 		damage = getDamage(&health, armor, minDamage, maxDamage);
 		
-		
-		healthPercent = (health/lastHealth)*100.0;
+			//get health percentage
+		healthPercent = (health/initalHealth)*100.0;
 		
 
 		if (health > 0) {
-			printf("Player health: %.2lf%% Damage: %.2lf Alive: true \n" , healthPercent, damage);
+			printf("Player health: %6.2lf (%6.2lf%%)     Damage: %6.2lf     Alive: true \n" ,health, healthPercent, damage);
 		}
 		
 		
 		if (health <= 0) {
 			alive = false;
-			printf("Player health: %.2lf%% Damage: Alive: false \n", healthPercent);
+			printf("Player health: %6.2lf (%6.2lf%%)     Damage: %6.2lf     Alive: false \n" ,health, healthPercent, damage);
 		}
-		
-		lastHealth = health;
-		health--;
 	}
 	
 	return 0;
