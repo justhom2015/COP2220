@@ -63,54 +63,19 @@ typedef int bool;
 #define false 0
 
 
-void getDamage(double *health, double armor, double minDamage, double maxDamage, double *damage, bool *alive){
+double getDamage(double *health, double armor, int minDamage, int maxDamage){
 	
+	double damage = 0.0;
 	
+		//get damage
+	damage = rand() % (maxDamage - minDamage + 1) + minDamage;
+	damage = (1-armor) * damage;
 	
+	*health = *health - damage;
 	
-}
-
-
-
-void health(){
-	
-}
-
-
-
-void armor(){
+	return damage;
 	
 }
-
-
-
-void minDamage(){
-	
-}
-
-
-
-void maxDamage(){
-	
-}
-
-
-
-void damage(){
-	
-}
-
-
-
-void alive(){
-	
-}
-
-
-
-
-
-
 
 
 

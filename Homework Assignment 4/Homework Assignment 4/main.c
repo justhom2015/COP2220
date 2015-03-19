@@ -45,59 +45,108 @@ typedef int bool;
 
 
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 #include "hw4Functions.h"
 
 int main(int argc, const char * argv[]) {
 	
 		//random seed srand
-	
-	
+	srand((unsigned) time(NULL));
 
 		//Current player's health as both input into the function and output (has damage subtracted from it).
-	double health;
+	double health = 1;
+	double lastHealth = 1;
+	double healthPercent = 100;
+
 	
 		//Armor modifier input into the function.
-	double armor;
+	double armor = 1;
+
+		//minimum damage
+	unsigned int minDamage = 1;
+
+		//maximum damage
+	unsigned int maxDamage = 1;
 	
-	int minDamage;
-	
-	int maxDamage;
-	
-	double actualDamage;
-	
+		//incurred damage
+	double damage = 0;
+
+		//default to player alive
 	bool alive = true;
 	
 	
 		//get input
+		// Allow the user to enter the health value, armor value, min damage, and max damage to be used in your function.
+	printf("Enter player health\n");
+	scanf("%lf", &health);
+	lastHealth = health;
 	
+	printf("Enter player armor\n");
+	scanf("%lf", &armor);
+	
+		//armor cant be more than 1
+	if (armor > 1) {
+		armor = 1 / armor;
+	}
+	
+	printf("Enter player minimum damage\n");
+	scanf("%i", &minDamage);
+
+	printf("Enter player maximum damage\n");
+	scanf("%i", &maxDamage);
+	
+		//swap if min is greater than max
+	if (minDamage > maxDamage) {
+		int temp = maxDamage;
+		maxDamage = minDamage;
+		minDamage = temp;
+	}
+
 	
 		//while player is alive
 	while (alive) {
-
-	
-		printf("Player health");
 		
-		if (3 == 4) {
-			
+		
+		damage = getDamage(&health, armor, minDamage, maxDamage);
+		
+		
+		healthPercent = (health/lastHealth)*100.0;
+		
+
+		if (health > 0) {
+			printf("Player health: %.2lf%% Damage: %.2lf Alive: true \n" , healthPercent, damage);
 		}
-	
+		
+		
+		if (health <= 0) {
+			alive = false;
+			printf("Player health: %.2lf%% Damage: Alive: false \n", healthPercent);
+		}
+		
+		lastHealth = health;
+		health--;
 	}
 	
-	
-		//if not alive
-	if (!alive) {
-		printf("Player health");
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	return 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
