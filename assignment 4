@@ -1,0 +1,52 @@
+# COP2220
+Assignments from my class
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+	
+	
+    double damageDealt(double *pHealth, double armor,int max ,int min, double *pdamage, int *palive)
+	{
+	
+		*pdamage=(rand() % (max - min + 1)) + min;
+		*pdamage=*pdamage*(1-armor);
+	    *pHealth= *pHealth - *pdamage ;
+	
+	 	  if(*pHealth>0)
+		  {
+		*palive=1;
+		  }
+		 if(*pHealth<0)
+		  {
+		*palive=0;
+		  }
+	
+
+	printf("Player health: %.2lf		Damage dealt: %.2lf		Alive: %i \n",*pHealth,*pdamage,*palive);
+	 return 0;
+} 
+void main()
+ {
+	
+
+      int min1,max2,palive=1;
+	double pdamage,armor,pHealth;
+
+	printf("Enter player health:\n");
+		scanf_s("%lf", & pHealth);
+
+	      printf("Enter player armor(0 to 1):\n");
+scanf_s("%lf", & armor);       
+
+printf("Enter player minimun damage dealt:\n");
+		scanf_s("%i", & min1);
+
+printf("Enter player maximun damage dealt:\n");
+		scanf_s("%i", & max2);
+
+		while(palive==1) 
+  damageDealt(&pHealth,armor,max2,min1,&pdamage,&palive);
+	
+  
+	system("pause");
+}
